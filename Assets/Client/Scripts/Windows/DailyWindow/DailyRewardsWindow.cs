@@ -1,10 +1,8 @@
 using System;
 using System.Collections.Generic;
-using System.Linq;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using Zenject;
-using Zenject.SpaceFighter;
 
 public class DailyRewardsWindow : BaseWindow, IPointerDownHandler
 {
@@ -13,7 +11,7 @@ public class DailyRewardsWindow : BaseWindow, IPointerDownHandler
 
     [Inject] private WindowsManager _windowsManager;
 
-    private Dictionary<int, int> _dayRewards = new Dictionary<int, int>() {{1, 5}, {2, 5}, {3, 10}, {4, 10}, {5, 15}, {6, 15},};
+    private Dictionary<int, int> _dayRewards = new Dictionary<int, int>() {{1, 5}, {2, 5}, {3, 10}, {4, 10}, {5, 15}, {6, 15}, {7, 5}};
 
     public event Action<int> OnCollectDailyReward;
     

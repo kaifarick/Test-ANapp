@@ -1,6 +1,4 @@
 using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public static class ApplicationData
@@ -28,7 +26,7 @@ public static class ApplicationData
         set { PlayerPrefs.SetInt(DAILY_DEYS_COLLECT_KEY, value); }
     }
     
-    public static int MaxDailyDays => 6;
+    public static int MaxDailyDays => 7;
 
     #endregion
     

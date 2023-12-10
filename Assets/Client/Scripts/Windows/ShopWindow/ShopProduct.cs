@@ -1,5 +1,4 @@
 
-
 public class ShopProduct
 {
     public decimal Price;

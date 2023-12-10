@@ -1,9 +1,7 @@
 using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerPrefsExtensions : MonoBehaviour
+public class PlayerPrefsExtensions
 {
     public static DateTime GetDate(string key, DateTime defaultTime = default)
     {

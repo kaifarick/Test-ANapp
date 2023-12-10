@@ -19,8 +19,8 @@ public class ShopManager : IInitializable
             {GameEnums.ShopItemEnum.Character1, new ShopProduct(){Price = 100, UnlockLevel = 0, ShopReward = new ShopReward(){RewardType = GameEnums.RewardType.Character}}},
             {GameEnums.ShopItemEnum.Character2, new ShopProduct(){Price = 200, UnlockLevel = 0, ShopReward = new ShopReward(){RewardType = GameEnums.RewardType.Character}}},
             {GameEnums.ShopItemEnum.Location1, new ShopProduct(){Price = 100, UnlockLevel = 5, ShopReward = new ShopReward(){RewardType = GameEnums.RewardType.Location}}},
-            {GameEnums.ShopItemEnum.Location2, new ShopProduct(){Price = 200, UnlockLevel = 0, ShopReward = new ShopReward(){RewardType = GameEnums.RewardType.Location}}},
-            {GameEnums.ShopItemEnum.Location3, new ShopProduct(){Price = 300, UnlockLevel = 7, ShopReward = new ShopReward(){RewardType = GameEnums.RewardType.Location}}},
+            {GameEnums.ShopItemEnum.Location2, new ShopProduct(){Price = 200, UnlockLevel = 7, ShopReward = new ShopReward(){RewardType = GameEnums.RewardType.Location}}},
+            {GameEnums.ShopItemEnum.Location3, new ShopProduct(){Price = 300, UnlockLevel = 9, ShopReward = new ShopReward(){RewardType = GameEnums.RewardType.Location}}},
     };
     
     
@@ -28,6 +28,7 @@ public class ShopManager : IInitializable
     {
         _iapManager.OnProductsFetchedEvent += OnProductsFetched;
         _iapManager.OnPurchaseSuccessEvent += OnPurchaseSuccess;
+        
         _iapManager.Initialize();
     }
 

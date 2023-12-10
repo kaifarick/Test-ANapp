@@ -40,8 +40,7 @@ public class ShopWindow : BaseWindow
     {
         OnPurchaseSuccessEvent?.Invoke(shopItemEnum);
     }
-
-
+    
     private void Reset()
     {
         _shopItemView = GetComponentsInChildren<ShopItemView>();

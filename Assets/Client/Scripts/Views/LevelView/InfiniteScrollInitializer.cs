@@ -1,7 +1,5 @@
 using Mopsicus.InfiniteScrollMod;
 using UnityEngine;
-using UnityEngine.Serialization;
-using UnityEngine.UI;
 using Zenject;
 
 public class InfiniteScrollInitializer : MonoBehaviour

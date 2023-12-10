@@ -14,6 +14,8 @@ public class DailyProgressBar : MonoBehaviour
 
     private Action _onFillProgress;
 
+    private Sequence _sequence;
+
     public void Initialize(int lastCollectDay, int currentDay, Action onFillProgress)
     {
         _slider.maxValue = ApplicationData.MaxDailyDays;
@@ -32,15 +34,17 @@ public class DailyProgressBar : MonoBehaviour
     {
         if(_lastCollectDay == _currentDay) return;
         
-        Sequence sequence = DOTween.Sequence();
-        sequence.Append(_slider.DOValue(_currentDay, 2));
-        sequence.AppendCallback((() =>
+        _sequence = DOTween.Sequence();
+        _sequence.Append(_slider.DOValue(_currentDay, 2));
+        _sequence.AppendCallback((() =>
         {
-            if(!gameObject.activeInHierarchy) return;
-            
             _counter.text = $"{_currentDay}/{ApplicationData.MaxDailyDays}";
             _onFillProgress?.Invoke();
         }));
     }
 
+    private void OnDisable()
+    {
+        _sequence.Kill();
+    }
 }

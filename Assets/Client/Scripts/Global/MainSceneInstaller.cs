@@ -1,13 +1,10 @@
-
 using UnityEngine;
-using UnityEngine.Purchasing;
 using Zenject;
 
 public class MainSceneInstaller : MonoInstaller
 {
     [SerializeField] private WindowsManager _windowsManager;
     [SerializeField] private AudioManager _audioManager;
-    [SerializeField] private IapManager _iapManager;
     public override void InstallBindings()
     {
         Container.BindInterfacesAndSelfTo<WindowsManager>().FromInstance(_windowsManager).AsSingle();

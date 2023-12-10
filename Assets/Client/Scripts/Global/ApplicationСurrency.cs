@@ -1,11 +1,8 @@
 using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public static class ApplicationСurrency
 {
-
     public static event Action OnAddCurrency;
     public static event Action OnSpendCurrency;
 
@@ -43,12 +40,8 @@ public static class ApplicationСurrency
                 break;
         }
     }
-    
-    
-    
-    
-    
-    
+
+
     public static int TicketCount
     {
         get { return PlayerPrefs.GetInt(TICKET_COUNT_KEY); }

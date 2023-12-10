@@ -1,5 +1,4 @@
 
-
 public class ShopReward
 {
     public GameEnums.RewardType RewardType;
