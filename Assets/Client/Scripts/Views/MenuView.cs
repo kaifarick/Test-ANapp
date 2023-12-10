@@ -24,9 +24,11 @@ public class MenuView : MonoBehaviour
     {
         _dailyRewardsButton.onClick.AddListener(() => _windowsManager.OpenWindow<DailyRewardsWindow>().Initialize());
         _settingsButton.onClick.AddListener(() => _windowsManager.OpenWindow<SettingsWindow>());
+        _shopButton.onClick.AddListener((() => _windowsManager.OpenWindow<ShopWindow>().Initialize()));
         _playButton.onClick.AddListener((() => _levelsView.Initialize()));
 
         ApplicationСurrency.OnAddCurrency += UpdateView;
+        ApplicationСurrency.OnSpendCurrency += UpdateView;
     }
 
     private void Start()

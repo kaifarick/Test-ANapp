@@ -7,6 +7,7 @@ public static class ApplicationСurrency
 {
 
     public static event Action OnAddCurrency;
+    public static event Action OnSpendCurrency;
 
     public static int GetCurrency(AppCurrency appCurrency)
     {
@@ -26,6 +27,19 @@ public static class ApplicationСurrency
             case AppCurrency.Ticket:
                 TicketCount += count;
                 OnAddCurrency?.Invoke();
+                break;
+        }
+    }
+    
+    public static void SpendCurrency(AppCurrency appCurrency, int count)
+    {
+        switch (appCurrency)
+        {
+            case AppCurrency.Ticket:
+               // if(TicketCount < count) return;
+                
+                TicketCount -= count;
+                OnSpendCurrency?.Invoke();
                 break;
         }
     }

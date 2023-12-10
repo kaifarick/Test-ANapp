@@ -6,7 +6,7 @@ using UnityEngine.UI;
 
 public abstract class BaseWindow : MonoBehaviour
 {
-    [SerializeField] private Button _closeButton;
+    [SerializeField] protected Button _closeButton;
 
     public virtual void Show()
     {
